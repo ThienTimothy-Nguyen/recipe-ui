@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Fried Chicken Recipe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+</head>
+<body>
+  <header class="container">
+    <div class="row">
+      This is the header
+    </div>
+  </header>
+  <main>
+    <section class="container">
+      <div class="row">
+        <h1>
+          Crispy Korean Fried Chicken
+        </h1>
+        <div class="recipe-table">
+          <div class="serving">
+            <label for="serving">Servings:</label>
+            <button 
+              class="serving__button"
+              onclick="decVal()"
+              >-</button>
+            <input 
+              id="serving" 
+              class="serving__input" 
+              type="number"
+              value="0"
+              onchange="validateVal(event.target.value)"
+              >
+            <button 
+              class="serving__button"
+              onclick="incVal()"
+              >+</button>
+          </div>
+          <div>
+            <div>
+              Ingredients
+            </div>
+            <div>
+              Method
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container">
+    <div class="row">
+      This is the footer
+    </div>
+  </footer>
+</body>
+</html>
