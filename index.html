@@ -14,41 +14,81 @@
     </div>
   </header>
   <main>
-    <section class="container">
-      <div class="row">
+    <article class="container">
+      <div class="row recipe">
         <h1>
           Crispy Korean Fried Chicken
         </h1>
-        <div class="recipe-table">
-          <div class="serving">
-            <label for="serving">Servings:</label>
+        <div class="recipe__container">
+          <section class="serving">
+            <label for="serving"><h2>Servings:</h2></label>
             <button 
               class="serving__button"
-              onclick="decVal()"
+              onclick="addVal(-1)"
               >-</button>
             <input 
               id="serving" 
               class="serving__input" 
               type="number"
-              value="0"
-              onchange="validateVal(event.target.value)"
+              value="1"
+              onchange="setVal(event.target.value)"
               >
             <button 
               class="serving__button"
-              onclick="incVal()"
+              onclick="addVal(1)"
               >+</button>
-          </div>
-          <div>
-            <div>
-              Ingredients
+          </section>
+          <section class="recipe-content__wrapper">
+            <div class="recipe-content__column">
+              <h2>Ingredients</h2>
+              <ul class="recipe-content__column--ingredients">
+                <li>Whole chicken: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">1.4</span> kg
+                  </strong>
+                </li>
+                <li>Rice wine: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">2.0</span> tbsp
+                  </strong>
+                </li>
+                <li>Minced ginger: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">2.0</span> tsp
+                  </strong>
+                </li>
+                <li>Sea salt: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">1.0</span> tsp
+                  </strong>
+                </li>
+                <li>Ground black pepper: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">0.5</span> tsp
+                  </strong>
+                </li>
+                <li>Potato starch: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">1.0</span> cup
+                  </strong>
+                </li>
+                <li>Cooking oil: 
+                  <strong class="recipe-content__quantity">
+                    <span class="number">0.5</span> L
+                  </strong>
+                </li>
+              </ul>
             </div>
-            <div>
-              Method
+            <div class="recipe-content__column recipe-content__column--method">
+              <h2>Method</h2>
+              <ol class="recipe-content__column--method">
+
+              </ol>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="container">
     <div class="row">
