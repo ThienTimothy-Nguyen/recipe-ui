@@ -14,22 +14,22 @@ const addVal = (num) => {
   setVal(newVal);
 }
 
-const ingredients = {
-  chicken: 1.4,
-  rice_wine: 2,
-  minced_ginger: 2,
-  salt: 1,
-  black_pepper: 0.5,
-  potato_starch: 1,
-  oil: 0.5,
-}
-
 const updateIngredientList = (serving) => {
+  const ingredients = {
+    chicken: 1.4,
+    rice_wine: 2,
+    minced_ginger: 2,
+    salt: 1,
+    black_pepper: 0.5,
+    potato_starch: 1,
+    oil: 0.5,
+  }
+
   ingredientsQuantities = Object.values(ingredients)
   for (let i = 0; i < ingredientsQuantities.length; i++) {
-    document.getElementsByClassName("number")[i]
-            .textContent = (ingredientsQuantities[i] * serving)
-            .toFixed(1)
+    document.getElementsByClassName("number")[i].textContent = (
+      ingredientsQuantities[i] * serving
+    ).toFixed(1)
   }
 }
 
