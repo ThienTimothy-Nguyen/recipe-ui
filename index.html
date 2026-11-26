@@ -8,20 +8,25 @@
   <script src="index.js"></script>
 </head>
 <body>
-  <header class="container">
-    <div class="row">
-      This is the header
-    </div>
-  </header>
   <main>
     <article class="container">
       <div class="row recipe">
-        <h1>
-          Crispy Korean Fried Chicken
-        </h1>
+        <div class="recipe__hero">
+          <h1 class="recipe__title">
+            Crispy Korean Fried Chicken
+          </h1>
+          <div class="recipe__subtitle-wrapper">
+            <div class="divider recipe__subtitle-divider"></div>
+            <h2 class="recipe__subtitle">
+              "The only recipe you will ever need."
+            </h2>
+            <div class="divider recipe__subtitle-divider"></div>
+          </div>
+        </div>
+        
         <div class="recipe__container">
           <section class="serving">
-            <label for="serving"><h2>Servings:</h2></label>
+            <label for="serving"><h3>Servings:</h3></label>
             <button 
               class="serving__button"
               onclick="addVal(-1)"
@@ -38,51 +43,87 @@
               onclick="addVal(1)"
               >+</button>
           </section>
+          <section class="recipe-nav__wrapper">
+            <button 
+              class="recipe-nav__button recipe-nav__button--ingredients"
+              onclick="displayContent('ingredients')"
+            >Ingredients</button>
+            <button 
+              class="recipe-nav__button recipe-nav__button--method"
+              onclick="displayContent('methods')"
+            >Method</button>
+          </section>
           <section class="recipe-content__wrapper">
-            <div class="recipe-content__column">
-              <h2>Ingredients</h2>
-              <ul class="recipe-content__column--ingredients">
-                <li>Whole chicken: 
+            <div class="recipe-content__column recipe-content__column--ingredients">
+              <h3>Ingredients</h3>
+              <div class="divider"></div>
+              <ul class="recipe-content__ingredients" aria-live="polite">
+                <li class="recipe-content__ingredient">
+                  <span>Whole chicken</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">1.4</span> kg
+                    
                   </strong>
                 </li>
-                <li>Rice wine: 
+                <li class="recipe-content__ingredient">
+                  <span>Rice wine</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">2.0</span> tbsp
+                   
                   </strong>
                 </li>
-                <li>Minced ginger: 
+                <li class="recipe-content__ingredient">
+                  <span>Minced ginger</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">2.0</span> tsp
+               
                   </strong>
                 </li>
-                <li>Sea salt: 
+                <li class="recipe-content__ingredient">
+                  <span>Sea salt</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">1.0</span> tsp
+                   
                   </strong>
                 </li>
-                <li>Ground black pepper: 
+                <li class="recipe-content__ingredient">
+                  <span>Ground black pepper</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">0.5</span> tsp
+                    
                   </strong>
                 </li>
-                <li>Potato starch: 
+                <li class="recipe-content__ingredient">
+                  <span>Potato starch</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">1.0</span> cup
+                  
                   </strong>
                 </li>
-                <li>Cooking oil: 
+                <li class="recipe-content__ingredient">
+                  <span>Cooking oil</span> 
                   <strong class="recipe-content__quantity">
-                    <span class="number">0.5</span> L
+                
                   </strong>
                 </li>
               </ul>
             </div>
-            <div class="recipe-content__column recipe-content__column--method">
-              <h2>Method</h2>
-              <ol class="recipe-content__column--method">
-
+            <div class="recipe-content__column recipe-content__column--methods">
+              <h3>Method</h3>
+              <div class="divider"></div>
+              <ol class="recipe-content__methods">
+                <li class="recipe-content__method">
+                  In a bowl, combine the chicken, rice wine, ginger, salt, and black pepper.
+                </li>
+                <li class="recipe-content__method">
+                  Coat the chicken evenly with starch.
+                </li>
+                <li class="recipe-content__method">
+                  Heat a generous amount of oil in a deep saucepan or fryer to 175°C / 347°F. Carefully add the chicken in batches.
+                </li>
+                <li class="recipe-content__method">
+                  Fry each batch for 3–5 minutes. Transfer the chicken to paper towels.
+                </li>
+                <li class="recipe-content__method">
+                  Scoop any floating debris from the oil. When it returns to 175°C / 347°F, fry the chicken a second time for 2–3 minutes.
+                </li>
+                <li class="recipe-content__method">
+                  Serve as is, or toss with an optional Korean fried chicken sauce.
+                </li>
               </ol>
             </div>
           </section>
@@ -90,10 +131,5 @@
       </div>
     </article>
   </main>
-  <footer class="container">
-    <div class="row">
-      This is the footer
-    </div>
-  </footer>
 </body>
 </html>
