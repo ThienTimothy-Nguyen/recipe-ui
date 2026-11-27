@@ -102,6 +102,15 @@ Components
   opacity: 0.4;
 }
 
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+}
+
 /* 
 
 Recipe 
@@ -261,10 +270,6 @@ Recipe content
 
 .recipe-content__method {
   margin-left: 1.25em;
-}
-
-.hidden {
-  display: none;
 }
 
 @media (max-width: 630px) {
