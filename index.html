@@ -47,60 +47,63 @@
             <button 
               class="recipe-nav__button recipe-nav__button--ingredients"
               onclick="displayContent('ingredients')"
+              aria-controls="ingredient-list ingedient-status"
             >Ingredients</button>
             <button 
               class="recipe-nav__button recipe-nav__button--method"
               onclick="displayContent('methods')"
+              aria-controls="ingredient-list ingedient-status"
             >Method</button>
           </section>
           <section class="recipe-content__wrapper">
             <div class="recipe-content__column recipe-content__column--ingredients">
               <h3>Ingredients</h3>
               <div class="divider"></div>
-              <ul class="recipe-content__ingredients" aria-live="polite">
+              <ul 
+                id="ingredient-list"
+                class="recipe-content__ingredients">
                 <li class="recipe-content__ingredient">
                   <span>Whole chicken</span> 
                   <strong class="recipe-content__quantity">
-                    
                   </strong>
                 </li>
                 <li class="recipe-content__ingredient">
                   <span>Rice wine</span> 
                   <strong class="recipe-content__quantity">
-                   
                   </strong>
                 </li>
                 <li class="recipe-content__ingredient">
                   <span>Minced ginger</span> 
                   <strong class="recipe-content__quantity">
-               
                   </strong>
                 </li>
                 <li class="recipe-content__ingredient">
                   <span>Sea salt</span> 
                   <strong class="recipe-content__quantity">
-                   
                   </strong>
                 </li>
                 <li class="recipe-content__ingredient">
                   <span>Ground black pepper</span> 
                   <strong class="recipe-content__quantity">
-                    
                   </strong>
                 </li>
                 <li class="recipe-content__ingredient">
                   <span>Potato starch</span> 
                   <strong class="recipe-content__quantity">
-                  
                   </strong>
                 </li>
                 <li class="recipe-content__ingredient">
                   <span>Cooking oil</span> 
                   <strong class="recipe-content__quantity">
-                
                   </strong>
                 </li>
               </ul>
+              <p 
+                id="ingredient-status" 
+                aria-hidden="true"
+                class="visually-hidden"
+                role="status">
+              </p>
             </div>
             <div class="recipe-content__column recipe-content__column--methods">
               <h3>Method</h3>

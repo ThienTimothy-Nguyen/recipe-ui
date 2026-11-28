@@ -1,11 +1,13 @@
 let content = "ingredients";
 
 const setVal = (val) => {
-  if (val === "" || val <= 0) {
-    document.getElementById("serving").value = 1;
+  const input = document.getElementById("serving")
+
+  if (val === "" || val < 1) {
+    input.value = 1;
     updateIngredientList(1);
   } else {
-    document.getElementById("serving").value = val;
+    input.value = val;
     updateIngredientList(val);
   };
 };
@@ -17,6 +19,8 @@ const addVal = (num) => {
 };
 
 const updateIngredientList = (serving) => {
+  if (serving < 1) throw new Error("Serving must be greater than or equal 1")
+
   const ingredients = {
     chicken: [1.4, "kg"],
     rice_wine: [2, "tbsp"],
@@ -34,6 +38,8 @@ const updateIngredientList = (serving) => {
       ${(ingredientsQuantities[i][0] * serving).toFixed(1)} ${ingredientsQuantities[i][1]}
     `;
   };
+
+  document.getElementById("ingredient-status").textContent = `Displaying ingredients for ${serving} serving.`
 };
 
 const updateDisplayContent = (content) => {
