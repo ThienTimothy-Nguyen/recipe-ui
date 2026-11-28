@@ -47,7 +47,7 @@
             <button 
               class="recipe-nav__button recipe-nav__button--ingredients"
               onclick="displayContent('ingredients')"
-              aria-controls=""
+              aria-controls="ingredient-list ingedient-status"
             >Ingredients</button>
             <button 
               class="recipe-nav__button recipe-nav__button--method"
@@ -100,6 +100,7 @@
               </ul>
               <p 
                 id="ingredient-status" 
+                aria-hidden="true"
                 class="visually-hidden"
                 role="status">
               </p>
